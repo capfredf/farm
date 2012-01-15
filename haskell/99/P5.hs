@@ -12,7 +12,6 @@ myReverse (x:xs) = myReverse xs ++ [x]
 myReverse' = foldl (\acc x->(x:acc)) []
 
 myReverse'' :: [a] -> [a]
-myReverse'' [] = []
 myReverse'' xs = _reverse [] xs
     where 
         _reverse ret [] = ret
