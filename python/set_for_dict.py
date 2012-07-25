@@ -9,5 +9,11 @@ class HashableDictWrapper(object):
     def __eq__(self, other):
         return self.__hash__()==other.__hash__()
 
+class O(object):
+    def __getitem__(self, key):
+        print key.start
+        print key.stop
+        return "hello"
 if __name__=="__main__":
-    print map(lambda x:x.original_str, set(map(HashableDictWrapper, ["aaaaaaaa", "aaaaaa", "bb", "bb", "Bb", "BB", "bB"])))
+    o = O()
+    o[1:2]
